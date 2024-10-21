@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
 from api import api as app
-from api_routes import api_blueprint
+#from api_routes import api_blueprint
 
-app.register_blueprint(api_blueprint)
+#app.register_blueprint(api_blueprint)
 
 app = Flask(__name__)
 
