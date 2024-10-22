@@ -1,8 +1,7 @@
+import os
 from flask import Flask, jsonify
 from api import api as app
-#from api_routes import api_blueprint
 
-#app.register_blueprint(api_blueprint)
 
 app = Flask(__name__)
 
@@ -34,4 +33,6 @@ def divide(numberA, numberB):
 
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 3000))
+
+    app.run(host='0.0.0.0', port=port)
